@@ -8,11 +8,11 @@ struct ContentView: View {
     var body: some View {
         VStack  {
             Text("Alert & ActionSheet")
-                .font(Font.custom("Inter", size: 20))
+                .font(.system(size: 25, weight: .bold))
                 .fontWeight(.bold)
                 .padding(30)
             
-            HStack(spacing: 45) {
+            HStack(spacing: 40) {
                 VStack(alignment: .leading, spacing: 25) {
                     Text("Пример Alert")
                         .frame(width: 150, height: 48, alignment: .leading)
@@ -73,7 +73,7 @@ struct ContentView: View {
                     Spacer()
                 }
             }
-            .padding(30)
+            .padding(20)
         }
     }
 struct ContentView_Previews: PreviewProvider {
