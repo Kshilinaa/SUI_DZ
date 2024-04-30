@@ -5,6 +5,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isErorr = false
+    @State var isSecondError = false
+    @State var isFirhdErorr = false
+    @State var isFourthError = false
+    @State var alertMessage = "Нажмите на кнопку"
+    @State var actionSheetMessage = "Нажмите на кнопку"
+    let randomMessages = ["RMLove", "Промокод на 50 приседаний", "Отдыхай"]
+    
     var body: some View {
         VStack  {
             Text("Alert & ActionSheet")
@@ -32,44 +40,61 @@ struct ContentView: View {
                 
                 VStack(spacing: 25) {
                     Button(action: {
-                        print("Показать Alert 1")
+                        self.isErorr = true
                     }) {
                         Text("Показать")
                             .frame(width: 150, height: 48)
-                            .background(Color("PurpleColor"))
+                            .background(Color("purpleColor"))
                             .foregroundColor(.white)
                             .cornerRadius(12)
-                    }
+                    }.alert(isPresented: $isErorr, content: {
+                        Alert(title: Text("Тест"))
+                    })
                     
                     Button(action: {
-                        print("Показать Alert 2")
+                        self.isSecondError = true
                     }) {
                         Text("Показать")
                             .frame(width: 150, height: 48)
-                            .background(Color("PurpleColor"))
+                            .background(Color("purpleColor"))
                             .foregroundColor(.white)
                             .cornerRadius(12)
-                    }
+                    }.alert(isPresented: $isSecondError, content: {
+                        Alert(title: Text(alertMessage),
+                              primaryButton: .default(Text("Кнопка 1"), action: {
+                                  alertMessage = "Последний раз нажимали на кнопку 1"
+                              }),
+                              secondaryButton: .destructive(Text("Кнопка 2"), action: {
+                                  alertMessage = "Последний раз нажимали на кнопку 2"
+                              }))
+                    })
+                    Button(action: {
+                        self.isFirhdErorr = true
+                    }) {
+                        Text("Показать")
+                            .frame(width: 150, height: 48)
+                            .background(Color("purpleColor"))
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }.actionSheet(isPresented: $isFirhdErorr, content: {
+                        ActionSheet(title: Text("Это ActionSheet с 1 кнопкой"))
+                    })
                     
                     Button(action: {
-                        print("Показать ActionSheet 1")
+                        self.isFourthError = true
                     }) {
                         Text("Показать")
                             .frame(width: 150, height: 48)
-                            .background(Color("PurpleColor"))
+                            .background(Color("purpleColor"))
                             .foregroundColor(.white)
                             .cornerRadius(12)
-                    }
-                    
-                    Button(action: {
-                        print("Показать ActionSheet 2")
-                    }) {
-                        Text("Показать")
-                            .frame(width: 150, height: 48)
-                            .background(Color("PurpleColor"))
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                    }
+                    }.actionSheet(isPresented: $isFourthError, content: {
+                        ActionSheet(title: Text(actionSheetMessage), buttons: [
+                            .default(Text("Нажми и получи послание на день"), action: {
+                                actionSheetMessage = randomMessages.randomElement() ?? "Ошибка"
+                            })
+                        ])
+                    })
                     Spacer()
                 }
             }
