@@ -11,6 +11,9 @@
 		5E28D3692BDFC05300B3282D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28D3682BDFC05300B3282D /* ContentView.swift */; };
 		5E28D36B2BDFC05400B3282D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28D36A2BDFC05400B3282D /* Assets.xcassets */; };
 		5E28D36E2BDFC05400B3282D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */; };
+		5E7B772C2BE51876009E78BF /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B772B2BE51876009E78BF /* CarsViewModel.swift */; };
+		5E7B772E2BE51884009E78BF /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B772D2BE51884009E78BF /* CarsModel.swift */; };
+		5E7B77302BE5189C009E78BF /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B772F2BE5189C009E78BF /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		5E28D3682BDFC05300B3282D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E28D36A2BDFC05400B3282D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E7B772B2BE51876009E78BF /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		5E7B772D2BE51884009E78BF /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
+		5E7B772F2BE5189C009E78BF /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				5E28D3662BDFC05300B3282D /* SUI_DZApp.swift */,
 				5E28D3682BDFC05300B3282D /* ContentView.swift */,
+				5E7B772B2BE51876009E78BF /* CarsViewModel.swift */,
+				5E7B772F2BE5189C009E78BF /* ActivityView.swift */,
+				5E7B772D2BE51884009E78BF /* CarsModel.swift */,
 				5E28D36A2BDFC05400B3282D /* Assets.xcassets */,
 				5E28D36C2BDFC05400B3282D /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7B772E2BE51884009E78BF /* CarsModel.swift in Sources */,
 				5E28D3692BDFC05300B3282D /* ContentView.swift in Sources */,
+				5E7B772C2BE51876009E78BF /* CarsViewModel.swift in Sources */,
+				5E7B77302BE5189C009E78BF /* ActivityView.swift in Sources */,
 				5E28D3672BDFC05300B3282D /* SUI_DZApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -292,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
