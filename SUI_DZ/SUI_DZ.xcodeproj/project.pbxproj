@@ -11,6 +11,11 @@
 		5E28D3692BDFC05300B3282D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28D3682BDFC05300B3282D /* ContentView.swift */; };
 		5E28D36B2BDFC05400B3282D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28D36A2BDFC05400B3282D /* Assets.xcassets */; };
 		5E28D36E2BDFC05400B3282D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */; };
+		5E438C3F2BE669620087D8D7 /* Somebody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E438C3E2BE669620087D8D7 /* Somebody.mp3 */; };
+		5E438C412BE669660087D8D7 /* Saruma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E438C402BE669660087D8D7 /* Saruma.mp3 */; };
+		5E438C432BE6696F0087D8D7 /* Marmelad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E438C422BE6696F0087D8D7 /* Marmelad.mp3 */; };
+		5E438C452BE78BBD0087D8D7 /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C442BE78BBD0087D8D7 /* SoundModel.swift */; };
+		5E438C472BE78BE80087D8D7 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C462BE78BE80087D8D7 /* SoundViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		5E28D3682BDFC05300B3282D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E28D36A2BDFC05400B3282D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E438C3E2BE669620087D8D7 /* Somebody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Somebody.mp3; sourceTree = "<group>"; };
+		5E438C402BE669660087D8D7 /* Saruma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Saruma.mp3; sourceTree = "<group>"; };
+		5E438C422BE6696F0087D8D7 /* Marmelad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marmelad.mp3; sourceTree = "<group>"; };
+		5E438C442BE78BBD0087D8D7 /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
+		5E438C462BE78BE80087D8D7 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 			children = (
 				5E28D3662BDFC05300B3282D /* SUI_DZApp.swift */,
 				5E28D3682BDFC05300B3282D /* ContentView.swift */,
+				5E438C442BE78BBD0087D8D7 /* SoundModel.swift */,
+				5E438C462BE78BE80087D8D7 /* SoundViewModel.swift */,
 				5E28D36A2BDFC05400B3282D /* Assets.xcassets */,
 				5E28D36C2BDFC05400B3282D /* Preview Content */,
 			);
@@ -63,6 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */,
+				5E438C3E2BE669620087D8D7 /* Somebody.mp3 */,
+				5E438C402BE669660087D8D7 /* Saruma.mp3 */,
+				5E438C422BE6696F0087D8D7 /* Marmelad.mp3 */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -126,6 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E28D36E2BDFC05400B3282D /* Preview Assets.xcassets in Resources */,
+				5E438C412BE669660087D8D7 /* Saruma.mp3 in Resources */,
+				5E438C432BE6696F0087D8D7 /* Marmelad.mp3 in Resources */,
+				5E438C3F2BE669620087D8D7 /* Somebody.mp3 in Resources */,
 				5E28D36B2BDFC05400B3282D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E438C472BE78BE80087D8D7 /* SoundViewModel.swift in Sources */,
+				5E438C452BE78BBD0087D8D7 /* SoundModel.swift in Sources */,
 				5E28D3692BDFC05300B3282D /* ContentView.swift in Sources */,
 				5E28D3672BDFC05300B3282D /* SUI_DZApp.swift in Sources */,
 			);
@@ -275,6 +295,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +325,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
