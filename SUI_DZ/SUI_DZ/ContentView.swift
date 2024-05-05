@@ -2,76 +2,7 @@
 //  ContentView.swift
 //  SUI_DZ
 //
-//  Created by Ксения Шилина on 29.04.2024.
-//
-import AVFoundation
 import SwiftUI
-
-class PlayerViewModel: ObservableObject {
-    @Published public var maxDuration: TimeInterval = 0.0
-    @Published public var currentTime: TimeInterval = 0.0
-    @Published public var isPlaying = false
-    @Published public var progress: Float = 0.0
-    
-    private var player: AVAudioPlayer?
-    private var timer: Timer?
-    
-    public func playSound(name: String) {
-        guard let audioPath = Bundle.main.path(forResource: name, ofType: "mp3") else { return }
-        do {
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-            maxDuration = player?.duration ?? 0.0
-            startTimer()
-            player?.play()
-            isPlaying = true
-        } catch {
-            isPlaying = false
-        }
-    }
-    
-    public func stop() {
-        player?.stop()
-        stopTimer()
-        isPlaying = false
-    }
-    
-    public func pause() {
-        player?.pause()
-        stopTimer()
-        isPlaying = false
-    }
-    
-    public func resume() {
-        player?.play()
-        startTimer()
-        isPlaying = true
-    }
-    
-    private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-            guard let player = self?.player else { return }
-            self?.currentTime = player.currentTime
-            self?.progress = Float(player.currentTime / player.duration)
-            self?.objectWillChange.send()
-        }
-    }
-    
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    public func setTime(value: Float) {
-        guard let player = player else { return }
-        let newTime = TimeInterval(value) * player.duration
-        player.currentTime = newTime
-        currentTime = newTime
-        if !player.isPlaying {
-            player.play()
-            isPlaying = true
-        }
-    }
-}
 
 struct ContentView: View {
     @State private var currentSongIndex = 0
@@ -100,25 +31,14 @@ struct ContentView: View {
                     
                     infoSong()
                     Spacer()
-                    buttonTralling()
+                    makeTwoButtonWithAlert()
                 }
                 .padding(.bottom)
                 
                 HStack {
-                    Slider(value: $viewModel.progress, in: 0...1, onEditingChanged: { editing in
-                        if !editing {
-                            viewModel.setTime(value: viewModel.progress)
-                        }
-                    })
-                    .accentColor(Color.white)
-                    .padding(.trailing)
-                    
+                    makeSlider()
                     Spacer()
-                    
-                    Text("\(formatTime(interval: Double(viewModel.currentTime)))")
-                        .font(.system(size: 15))
-                        .foregroundColor(.white)
-                        .padding(.trailing)
+                    makeTimer()
                 }
                 
                 HStack(spacing: 50) {
@@ -185,7 +105,27 @@ struct ContentView: View {
         }
     }
     
-    func buttonTralling() -> some View {
+    /// Создание слайдера
+    func makeSlider() -> some View {
+        return  Slider(value: $viewModel.progress, in: 0...1, onEditingChanged: { editing in
+            if !editing {
+                viewModel.setTime(value: viewModel.progress)
+            }
+        })
+        .accentColor(Color.white)
+        .padding(.trailing)
+    }
+    
+    /// Время проигрывания музыки
+    func makeTimer() -> some View {
+        return Text("\(formatTime(interval: Double(viewModel.currentTime)))")
+            .font(.system(size: 15))
+            .foregroundColor(.white)
+            .padding(.trailing)
+    }
+    
+    /// Кнопка сохранения и кнопка отправить
+    func makeTwoButtonWithAlert() -> some View {
         return HStack {
             Button(action: {
                 showSavedMessage = true
