@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		5E28D3672BDFC05300B3282D /* SUI_DZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28D3662BDFC05300B3282D /* SUI_DZApp.swift */; };
-		5E28D3692BDFC05300B3282D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28D3682BDFC05300B3282D /* ContentView.swift */; };
+		5E28D3692BDFC05300B3282D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28D3682BDFC05300B3282D /* MainTabView.swift */; };
 		5E28D36B2BDFC05400B3282D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28D36A2BDFC05400B3282D /* Assets.xcassets */; };
 		5E28D36E2BDFC05400B3282D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */; };
+		5E438C492BE7EAC40087D8D7 /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C482BE7EAC40087D8D7 /* VPNService.swift */; };
+		5E438C4B2BE7EB040087D8D7 /* VPNPackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C4A2BE7EB040087D8D7 /* VPNPackageModel.swift */; };
+		5E438C502BE7EC410087D8D7 /* PurchaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C4F2BE7EC410087D8D7 /* PurchaseItemView.swift */; };
+		5E438C522BE7EC620087D8D7 /* PurchaseBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C512BE7EC620087D8D7 /* PurchaseBasketView.swift */; };
+		5E438C542BE7EC820087D8D7 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C532BE7EC820087D8D7 /* PurchaseView.swift */; };
+		5E438C5C2BE83DC40087D8D7 /* VpnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E438C5B2BE83DC40087D8D7 /* VpnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E28D3632BDFC05300B3282D /* SUI_DZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUI_DZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E28D3662BDFC05300B3282D /* SUI_DZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUI_DZApp.swift; sourceTree = "<group>"; };
-		5E28D3682BDFC05300B3282D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5E28D3682BDFC05300B3282D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		5E28D36A2BDFC05400B3282D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E438C482BE7EAC40087D8D7 /* VPNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
+		5E438C4A2BE7EB040087D8D7 /* VPNPackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNPackageModel.swift; sourceTree = "<group>"; };
+		5E438C4F2BE7EC410087D8D7 /* PurchaseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemView.swift; sourceTree = "<group>"; };
+		5E438C512BE7EC620087D8D7 /* PurchaseBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseBasketView.swift; sourceTree = "<group>"; };
+		5E438C532BE7EC820087D8D7 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		5E438C5B2BE83DC40087D8D7 /* VpnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				5E28D3662BDFC05300B3282D /* SUI_DZApp.swift */,
-				5E28D3682BDFC05300B3282D /* ContentView.swift */,
+				5E438C4E2BE7EC210087D8D7 /* View */,
 				5E28D36A2BDFC05400B3282D /* Assets.xcassets */,
 				5E28D36C2BDFC05400B3282D /* Preview Content */,
 			);
@@ -65,6 +77,20 @@
 				5E28D36D2BDFC05400B3282D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E438C4E2BE7EC210087D8D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E28D3682BDFC05300B3282D /* MainTabView.swift */,
+				5E438C4A2BE7EB040087D8D7 /* VPNPackageModel.swift */,
+				5E438C482BE7EAC40087D8D7 /* VPNService.swift */,
+				5E438C5B2BE83DC40087D8D7 /* VpnView.swift */,
+				5E438C532BE7EC820087D8D7 /* PurchaseView.swift */,
+				5E438C512BE7EC620087D8D7 /* PurchaseBasketView.swift */,
+				5E438C4F2BE7EC410087D8D7 /* PurchaseItemView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E28D3692BDFC05300B3282D /* ContentView.swift in Sources */,
+				5E438C542BE7EC820087D8D7 /* PurchaseView.swift in Sources */,
+				5E28D3692BDFC05300B3282D /* MainTabView.swift in Sources */,
+				5E438C502BE7EC410087D8D7 /* PurchaseItemView.swift in Sources */,
 				5E28D3672BDFC05300B3282D /* SUI_DZApp.swift in Sources */,
+				5E438C4B2BE7EB040087D8D7 /* VPNPackageModel.swift in Sources */,
+				5E438C5C2BE83DC40087D8D7 /* VpnView.swift in Sources */,
+				5E438C492BE7EAC40087D8D7 /* VPNService.swift in Sources */,
+				5E438C522BE7EC620087D8D7 /* PurchaseBasketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
